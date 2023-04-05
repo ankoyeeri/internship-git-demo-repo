@@ -48,3 +48,7 @@ div.icon-check {
 div.icon-cross {
   background-image: url("/assets/cross.png");
 }
+
+button {
+  width: 100%;
+}
