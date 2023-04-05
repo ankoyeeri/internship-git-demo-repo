@@ -78,49 +78,7 @@ div.main form > button {
 
     color: white;
 
-    background-color: #5a5656;
 
-    font-size: 11pt;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: normal;
-}
-
-button:hover {
-    cursor: pointer;
-}
-
-footer {
-    display: flex;
-    align-items: end;
-
-    position: fixed;
-    bottom: 0;
-
-    width: 100%;
-    height: 100px;
-
-    margin-top: auto;
-    margin: 0 auto;
-    padding: 0;
-
-    background-color: #5a5656;
-    color: white;
-
-    font-size: 11pt;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: normal;
-    font-size: small;
-}
-
-footer > span {
-    flex-grow: 1;
-    margin: 20px
-}
-
-footer > span#made-by {
-    text-align: left;
-}
-
-footer > span#year {
-    text-align: right;
+    font-size: 10pt;
+    font-weight: 400;
 }
