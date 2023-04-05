@@ -1,0 +1,69 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 20%;
+}
+
+nav.navbar > a#home {
+  font-size: 12pt;
+}
+
+div.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 35px;
+}
+
+div.profile {
+  display: flex;
+  flex-direction: column;
+
+  width: 80%;
+
+  /* border: 1px solid black; */
+}
+
+/* Profile picture block with user info block */
+div.profile > div:first-child {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Block with buttons "Reset passowrd" and "Reset email" */
+div.profile > div:last-child {
+  margin-top: 15px;
+}
+
+div.profile > div:last-child > button {
+  box-sizing: border-box;
+
+  width: 150px;
+
+  margin-right: 20px;
+  padding: 5px 10px;
+
+  border-radius: 15px;
+}
+
+div.profile-img {
+  position: relative;
+  /* margin-right: 30px; */
+}
+
+div.profile-img > img {
+  width: 150px;
+  height: 150px;
+}
+
+div.profile-info {
+  position: relative;
+  left: 30px;
+}
+
+div.profile-info > p {
+  margin: 0;
+}
