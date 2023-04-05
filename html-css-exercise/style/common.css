@@ -1,3 +1,9 @@
+body {
+    background-color: #D9D9D9;    
+
+    font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 button.button {
     display: inline-block;
 
@@ -9,7 +15,7 @@ button.button {
 
     border: none;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Inter;
     font-weight: 500;
     font-style: normal;
 }
@@ -19,7 +25,7 @@ button.button-default {
 
     vertical-align: middle;
 
-    background-color: #484646;
+    background-color: #363636;
     color: white;
 }
 
@@ -45,7 +51,7 @@ footer {
     color: white;
 
     font-size: 11pt;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Inter;
     font-style: normal;
     font-size: small;
 }
