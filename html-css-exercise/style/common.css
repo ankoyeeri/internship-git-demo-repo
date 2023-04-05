@@ -15,7 +15,7 @@ body > h1.main-heading {
 
 body > nav.navbar {
   width: 100%;
-  max-width: 550px;
+  max-width: 750px;
 
   padding-left: 20px;
   box-sizing: border-box;
@@ -69,7 +69,7 @@ button.button:hover {
 
 div.main {
   width: 100%;
-  max-width: 550px;
+  max-width: 750px;
 
   margin-top: 15px;
 
@@ -140,7 +140,7 @@ footer {
   bottom: 0;
 
   width: 100%;
-  min-height: 100px;
+  min-height: 75px;
 
   margin-top: auto;
   margin: 0 auto;

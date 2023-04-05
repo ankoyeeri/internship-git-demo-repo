@@ -4,19 +4,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="style/common.css" />
     <link rel="stylesheet" href="./style/login.css" />
-    <link rel="stylesheet" href="style/common.css">
-    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
 
     <title>Login</title>
   </head>
   <body>
+    <h1 class="main-heading">Movie rental</h1>
+
     <div class="main">
-      <h1>Movie rental</h1>
-
       <!-- Sign in form -->
-      <form method="post">
-
+      <form method="get" action="home.html">
         <!-- Email field -->
         <div class="form-segment">
           <label for="email">Email</label>
@@ -33,7 +35,7 @@
       </form>
 
       <!-- Register form -->
-      <form method="post">
+      <form method="get" action="home.html">
         <!-- Name filed -->
         <div class="form-segment">
           <label for="name">Name</label>
@@ -75,8 +77,8 @@
     </div>
 
     <footer>
-        <span id="made-by">Made by: Yaroslav Guz</span>
-        <span id="year">2023</span>
+      <span id="made-by">Made by: Yaroslav Guz</span>
+      <span id="year">2023</span>
     </footer>
   </body>
 </html>

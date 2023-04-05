@@ -23,8 +23,6 @@ div.profile {
   flex-direction: column;
 
   width: 80%;
-
-  /* border: 1px solid black; */
 }
 
 /* Profile picture block with user info block */
@@ -55,13 +53,15 @@ div.profile-img {
 }
 
 div.profile-img > img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
 div.profile-info {
   position: relative;
   left: 30px;
+
+  font-size: 10pt;
 }
 
 div.profile-info > p {
