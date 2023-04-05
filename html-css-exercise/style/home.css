@@ -1,136 +1,50 @@
-
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    margin: 0;
-    padding: 0 20%;
-}
-
-body > h1 {
-    color: white;
-
-    font-style: italic;
-    font-size: 20pt;
-}
-
-body > nav.navbar {
-    width: 100%;
-    max-width: 550px;
-
-    padding-left: 20px;
-    box-sizing: border-box;
-
-    border-radius: 18px;
-    background-color: #474646;
-}
-
-nav.navbar > a {
-    display: inline-block;
-
-    padding: 10px;
-
-    text-decoration: none;
-    font-size: 10pt;
-    font-weight: 600;
-
-    color: white;
+  margin: 0;
+  padding: 0 20%;
 }
 
 nav.navbar > a#home {
-    font-size: 12pt;
+  font-size: 12pt;
 }
 
 div.main {
-    width: 100%;
-    max-width: 550px;
+  width: 100%;
+  max-width: 550px;
 
-    flex-grow: 1;
-    margin: 0;
-}
-
-div.table-block {
-    box-sizing: border-box;
-    padding: 0px 35px;
-    padding-bottom: 20px;
-
-    border-radius: 15px;
-
-    background-color: white;
-}
-
-div.table-block > h1 {
-    position: relative;
-    top: 10px;
-
-    padding-bottom: 15px;
-
-    text-align: center;
-
-    font-weight: 400;
-    font-size: 15pt;
-}
-
-div.table-block > table {
-    width: 100%;
-
-    border-collapse: separate;
-    border-spacing: 0 8px;
-
-    font-size: 10pt;
-}
-
-div.table-block > table th {
-    text-align: left;
+  flex-grow: 1;
+  margin: 0;
 }
 
 th#price-header {
-    width: 90px;
+  width: 90px;
 }
 
 th#stock-header {
-    text-align: center;
-}
-
-div.table-block > table td {
-    padding: 0;
-
-    background-color: #e3e2e2;
-
-    text-align: left;
-    font-weight: 400;
+  text-align: center;
 }
 
 td#icon {
-    text-align: center;
+  text-align: center;
 }
-
-div.table-block > table td:first-child {
-    padding-left: 10px;
-    border-radius: 20px 0 0 20px;
-}
-
-
-div.table-block > table th:first-child {
-    padding-left: 10px;
-}
-
 
 div.icon {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 
-    width: 18px;
-    height: 18px;
+  width: 18px;
+  height: 18px;
 
-    background-size: contain;
+  background-size: contain;
 }
 
 div.icon-check {
-    background-image: url("/assets/check.png");
+  background-image: url("/assets/check.png");
 }
 
 div.icon-cross {
-    background-image: url("/assets/cross.png");
+  background-image: url("/assets/cross.png");
 }
