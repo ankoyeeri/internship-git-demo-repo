@@ -1,6 +1,9 @@
 body {
   margin: 0;
   background-color: #d9d9d9;
+
+  padding-bottom: 85px;
+
   font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -40,7 +43,7 @@ button.button {
   display: inline-block;
 
   margin: 0;
-  padding: 0;
+  padding: 5px;
 
   border: none;
 
@@ -50,15 +53,11 @@ button.button {
 }
 
 button.button-default {
-  padding: 5px;
-
   background-color: #363636;
   color: white;
 }
 
 button.button-alert {
-  padding: 5px;
-
   background-color: #c93333;
   color: white;
 }
