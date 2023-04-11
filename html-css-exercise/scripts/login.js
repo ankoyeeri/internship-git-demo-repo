@@ -1,5 +1,5 @@
-import AlertErrorHandler from "./error.js";
-import {FormValidator, FormField } from "./form-validator.js";
+import AlertErrorHandler from "./common/error.js";
+import {FormValidator, FormField } from "./common/form-validator.js";
 
 function validateRegisterForm() {
   const form = document.getElementById("register-form");
