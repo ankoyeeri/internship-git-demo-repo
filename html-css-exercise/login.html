@@ -18,24 +18,35 @@
 
     <div class="main">
       <!-- Sign in form -->
-      <form method="get" action="home.html">
+      <form method="get" id="sign-in-form">
         <!-- Email field -->
         <div class="form-segment">
           <label for="email">Email</label>
-          <input type="email" placeholder="email" name="email" />
+          <input type="email" placeholder="email" name="email" required />
         </div>
 
         <!-- Password field -->
         <div class="form-segment">
           <label for="password">Password</label>
-          <input type="password" placeholder="password" name="password" />
+          <input
+            type="password"
+            placeholder="password"
+            name="password"
+            required
+          />
         </div>
 
-        <button class="button button-default" type="submit">Sign in</button>
+        <button
+          class="button button-default button-submit"
+          type="button"
+          onclick="validateLoginForm()"
+        >
+          Sign in
+        </button>
       </form>
 
       <!-- Register form -->
-      <form method="get" action="home.html">
+      <form id="register-form">
         <!-- Name filed -->
         <div class="form-segment">
           <label for="name">Name</label>
@@ -56,8 +67,8 @@
 
         <!-- Email agin field -->
         <div class="form-segment">
-          <label for="email">Email again</label>
-          <input type="email" placeholder="email" name="email" />
+          <label for="emailAgain">Email again</label>
+          <input type="email" placeholder="email" name="emailAgain" />
         </div>
 
         <!-- Password field -->
@@ -68,11 +79,17 @@
 
         <!-- Password again field -->
         <div class="form-segment">
-          <label for="password">Password again</label>
-          <input type="password" placeholder="password" name="password" />
+          <label for="passwordAgain">Password again</label>
+          <input type="password" placeholder="password" name="passwordAgain" />
         </div>
 
-        <button class="button button-default" type="submit">Register</button>
+        <button
+          class="button button-default button-submit"
+          onclick="validateRegisterForm()"
+          type="button"
+        >
+          Register
+        </button>
       </form>
     </div>
 
@@ -80,5 +97,7 @@
       <span id="made-by">Made by: Yaroslav Guz</span>
       <span id="year">2023</span>
     </footer>
+
+    <script src="scripts/login.js"></script>
   </body>
 </html>

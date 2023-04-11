@@ -4,7 +4,6 @@ body {
   align-items: center;
 
   margin: 0;
-  padding: 0 25%;
 }
 
 div.main {
@@ -13,7 +12,7 @@ div.main {
   align-items: center;
 
   width: 100%;
-  max-width: 220px;
+  max-width: 240px;
 
   margin-top: 0;
   margin-bottom: 15px;
@@ -28,24 +27,38 @@ div.main > form {
 
   width: 100%;
 
-  padding: 15px 0;
+  box-sizing: border-box;
+  padding: 15px 25px;
 
   border-radius: 15px;
 
   background-color: white;
 }
 
-form > button.button {
-  border-radius: 15px;
-  width: 55%;
-}
-
-form > div.form-segment {
+.form-segment {
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+
   margin-bottom: 15px;
 }
 
-form > div.form-segment > label {
+.form-segment input {
+  width: 100%;
+  height: 25px;
+
+  padding-left: 8px;
+
+  border: none;
+  background-color: #e9e9e9;
+}
+
+.form-segment label {
   font-size: 8pt;
+}
+
+button.button-submit {
+  border-radius: 15px;
+  width: 130px;
 }
