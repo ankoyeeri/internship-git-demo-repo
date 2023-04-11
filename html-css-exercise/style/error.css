@@ -1,0 +1,48 @@
+.error-container {
+  position: fixed;
+
+  top: 0;
+  right: 0;
+
+  width: 30vw;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.error {
+  width: 100%;
+
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin-bottom: 5px;
+
+  border: 1px solid black;
+  border-radius: 3px;
+
+  background-color: rgb(255, 70, 70);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.error-message {
+  color: white;
+}
+
+.close-error-message button {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+  color: white;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.close-error-message button:hover {
+  color: black;
+}
