@@ -32,15 +32,17 @@
           </div>
 
           <div class="profile-info">
-            <p><b>Name</b>: John</p>
-            <p><b>Surname</b>: Newman</p>
-            <p><b>Email</b>: john.newman@mail.com</p>
+            <p><b>Name:</b></p>
+            <p><b>Surname:</b></p>
+            <p><b>Email:</b></p>
           </div>
         </div>
 
         <div>
           <button class="button button-default">Reset password</button>
-          <button class="button button-default">Reset email</button>
+          <button class="button button-default" onclick="changeEmail()">
+            Reset email
+          </button>
         </div>
       </div>
     </div>
@@ -49,5 +51,7 @@
       <span id="made-by">Made by: Yaroslav Guz</span>
       <span id="year">2023</span>
     </footer>
+
+    <script type="module" src="scripts/profile.js"></script>
   </body>
 </html>
