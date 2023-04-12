@@ -21,9 +21,11 @@ body > nav.navbar {
   max-width: 750px;
 
   padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   box-sizing: border-box;
 
-  border-radius: 18px;
+  border-radius: 22px;
   background-color: #474646;
 }
 

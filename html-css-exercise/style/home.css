@@ -4,49 +4,44 @@ body {
   align-items: center;
 
   margin: 0;
-  padding: 0 20%;
+  padding-left: 32vw;
+  padding-right: 32vw;
 }
 
-nav.navbar > a#home {
+.navbar > a:first-child {
   font-size: 12pt;
 }
 
-div.main {
+table {
   width: 100%;
-  max-width: 550px;
-
-  flex-grow: 1;
-  margin: 0;
 }
 
-th#price-header {
-  width: 90px;
-}
-
-th#stock-header {
+table tr th:last-child {
   text-align: center;
 }
 
-td#icon {
-  text-align: center;
-}
-
-div.icon {
-  display: inline-block;
+.icon {
   position: relative;
 
-  width: 18px;
-  height: 18px;
+  width: 100%;
 
-  background-size: contain;
+  display: flex;
+  justify-content: center;
 }
 
-div.icon-check {
+.icon-check {
   background-image: url("/assets/check.png");
 }
 
-div.icon-cross {
+.icon-cross {
   background-image: url("/assets/cross.png");
+}
+
+.icon-check,
+.icon-cross {
+  background-size: contain;
+  width: 18px;
+  height: 18px;
 }
 
 button {
