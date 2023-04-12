@@ -5,10 +5,18 @@ import {
   createRemoveButton,
 } from "./common/html-elements.js";
 import MovieInCart from "./models/MovieInCart.js";
+import Movie from "./models/Movie.js";
 
-const yourMovies = [
+let yourMovies = [
   new MovieInCart("Batman", "Action", 4.55),
   new MovieInCart("Samurai Champloo", "Action", 7.49),
+];
+
+const movies = [
+  new Movie("Batman", "Action", 4.55, 1),
+  new Movie("Samurai Champloo", "Action", 4.55, 1),
+  new Movie("Sherlock", "Detective", 4.55, 3),
+  new Movie("Danganronpa", "Thriller", 4.55, 0),
 ];
 
 function fillRule(item, index) {
@@ -19,23 +27,39 @@ function fillRule(item, index) {
 
   const row = document.createElement("tr");
 
-  const name = document.createElement("td");
-  name.innerHTML = item.name;
+  const nameCell = document.createElement("td");
+  nameCell.innerHTML = item.name;
 
-  const genre = document.createElement("td");
-  genre.innerHTML = item.genre;
+  const genreCell = document.createElement("td");
+  genreCell.innerHTML = item.genre;
 
-  const time = document.createElement("td");
+  const timeCell = document.createElement("td");
 
-  const price = document.createElement("td");
-  price.innerHTML = item.priceFor12H + "$";
+  const priceCell = document.createElement("td");
+  priceCell.innerHTML = item.priceFor12H + "$";
 
-  const removeButtton = document.createElement("td");
+  const removeButttonCell = document.createElement("td");
+  let removeButton = createRemoveButton(index);
+  removeButton.addEventListener("click", () => {
+    yourMovies = yourMovies.filter((movie) => {
+      return movie.name !== item.name;
+    });
 
-  time.appendChild(createTimeController(price));
-  removeButtton.appendChild(createRemoveButton());
+    movies.map((movie) => {
+      if (movie.name === item.name) {
+        movie.countInStock += 1;
+      }
+      return movie;
+    });
 
-  row.append(name, genre, time, price, removeButtton);
+    console.log(movies);
+    row.remove();
+  });
+
+  timeCell.appendChild(createTimeController(priceCell));
+  removeButttonCell.appendChild(removeButton);
+
+  row.append(nameCell, genreCell, timeCell, priceCell, removeButttonCell);
 
   return row;
 }

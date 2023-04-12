@@ -34,6 +34,14 @@ export default class Movie {
     return this.#priceFor12H;
   }
 
+  get countInStock() {
+    return this.#countInStock;
+  }
+
+  set countInStock(value) {
+    this.#countInStock = value;
+  }
+
   get inStock() {
     return this.#countInStock > 0;
   }
