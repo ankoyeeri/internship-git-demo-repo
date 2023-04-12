@@ -1,3 +1,5 @@
+import MovieInCart from "./MovieInCart.js";
+
 export default class Movie {
   #name = "";
   #genre = "";
@@ -40,10 +42,7 @@ export default class Movie {
     if (this.#countInStock <= 0) return null;
 
     this.#countInStock -= 1;
-    return {
-      name: this.name,
-      genre: this.genre,
-      priceFor12H: this.priceFor12H,
-    };
+
+    return new MovieInCart(this.name, this.genre, this.priceFor12H);
   }
 }
