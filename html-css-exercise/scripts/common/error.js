@@ -1,4 +1,4 @@
-class AlertErrorHandler {
+export default class AlertErrorHandler {
   static raise(error) {
     if (!(error instanceof Error))
       throw new TypeError('"error" should be Error type');
@@ -43,13 +43,12 @@ class AlertErrorHandler {
     const closeErrorMessage = document.createElement("div");
     closeErrorMessage.className = "close-error-message";
 
-    const buttonClose = document.createElement('button');
-    buttonClose.innerHTML = 'X'
-    buttonClose.onclick = function() {
-        errorBox.remove();
+    const buttonClose = document.createElement("button");
+    buttonClose.innerHTML = "X";
+    buttonClose.onclick = function () {
+      errorBox.remove();
     };
     closeErrorMessage.appendChild(buttonClose);
-    
 
     errorBox.appendChild(errorMessage);
     errorBox.appendChild(closeErrorMessage);
@@ -57,5 +56,3 @@ class AlertErrorHandler {
     errorContainer.appendChild(errorBox);
   }
 }
-
-export default AlertErrorHandler;
