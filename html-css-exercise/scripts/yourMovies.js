@@ -19,27 +19,30 @@ const movies = [
   new Movie("Danganronpa", "Thriller", 4.55, 0),
 ];
 
+// Function that describes, how table rown will be drawn
 function fillRule(item, index) {
   if (!(item instanceof MovieInCart))
     throw new TypeError('"item" should be MovieInCart');
   if (typeof index !== "number")
     throw new TypeError('"index" should be number');
 
-  const row = document.createElement("tr");
+  const row = document.createElement("tr"); // Main element
 
-  const nameCell = document.createElement("td");
+  const nameCell = document.createElement("td"); // Name cell
   nameCell.innerHTML = item.name;
 
-  const genreCell = document.createElement("td");
+  const genreCell = document.createElement("td"); // Genre cell
   genreCell.innerHTML = item.genre;
 
-  const timeCell = document.createElement("td");
+  const timeCell = document.createElement("td"); // Time cell
 
-  const priceCell = document.createElement("td");
+  const priceCell = document.createElement("td"); // Price cell
   priceCell.innerHTML = item.priceFor12H + "$";
 
-  const removeButttonCell = document.createElement("td");
-  let removeButton = createRemoveButton(index);
+  const removeButttonCell = document.createElement("td"); // Remove button cell
+  let removeButton = createRemoveButton(index); // Remove button
+
+  //  Click event listening
   removeButton.addEventListener("click", () => {
     yourMovies = yourMovies.filter((movie) => {
       return movie.name !== item.name;
@@ -59,11 +62,12 @@ function fillRule(item, index) {
   timeCell.appendChild(createTimeController(priceCell));
   removeButttonCell.appendChild(removeButton);
 
-  row.append(nameCell, genreCell, timeCell, priceCell, removeButttonCell);
+  row.append(nameCell, genreCell, timeCell, priceCell, removeButttonCell); // Build row
 
   return row;
 }
 
+// IIFE to be able to find execution point faster
 (function build() {
   try {
     let tableDrawer = new TableDrawer(
