@@ -1,6 +1,8 @@
-import AlertErrorHandler from "./common/error.js";
-
+/**
+ * @class Reprpesents Profile page. Alows to work with Name, Surname, Email fields directly
+ */
 class ProfilePage {
+  // private fields
   #nameParagraph = null;
   #surnameParagraph = null;
   #emailnameParagraph = null;
@@ -9,18 +11,24 @@ class ProfilePage {
     this.#parsePage();
   }
 
+  // Reference to name HTML paragraph element
   set Name(value) {
     this.#nameParagraph.innerHTML = `<b>Name:</b> ${value}`;
   }
 
+  // Reference to surname HTML paragraph element
   set Surname(value) {
     this.#surnameParagraph.innerHTML = `<b>Surname:</b> ${value}`;
   }
 
+  // Reference to email HTML paragraph element
   set Email(value) {
     this.#emailnameParagraph.innerHTML = `<b>Email:</b> ${value}`;
   }
 
+  /**
+   * Parse page and find Name, Surname and Email fields. Assign elements
+   */
   #parsePage() {
     const profileInfoContainer =
       document.getElementsByClassName("profile-info")[0];
