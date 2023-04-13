@@ -1,11 +1,20 @@
 import MovieInCart from "./MovieInCart.js";
 
+/**
+ * @class Represents a Movie for renting
+ */
 export default class Movie {
   #name = "";
   #genre = "";
   #priceFor12H = 0;
   #countInStock = 0;
 
+  /**
+   * @param {string} name Movie name
+   * @param {string} genre Movie genre
+   * @param {number} priceFor12H Movie rent price for 12 hours
+   * @param {number} countInStock Movie count in stock
+   */
   constructor(name, genre, priceFor12H, countInStock) {
     if (
       typeof name !== "string" ||
@@ -46,6 +55,10 @@ export default class Movie {
     return this.#countInStock > 0;
   }
 
+  /**
+   * Rent one film copy. Using this method will decrease value of _countInStock_ property.
+   * @returns **MovieInCart** object based on actual Movie object data.
+   */
   rentOne() {
     if (this.#countInStock <= 0) return null;
 
