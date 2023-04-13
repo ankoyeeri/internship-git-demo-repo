@@ -28,6 +28,9 @@ export class FormValidator {
   }
 }
 
+/**
+ * @class Represents single form field with validation rule from FormData
+ */
 export class FormField {
   #name = "";
   #value = undefined;
@@ -45,6 +48,20 @@ export class FormField {
     return this.#validator;
   }
 
+  /**
+   * @param {string} name Field name
+   * @param {any} value Field value
+   * @param {function(): boolean} validator Field validator
+   *
+   * @example
+   * // Init password form field that should not be empty and not less than 7 symbols
+   * const form = document.getElemebtByTagName('form')[0];
+   * let formData = new FormData(form);
+   *
+   * let passwordFormField = new FormField('password', formData.get('password'), function() {
+   *    return this.value && this.value.length >= 7;
+   * });
+   */
   constructor(name, value, validator) {
     this.#name = name;
     this.#value = value;
