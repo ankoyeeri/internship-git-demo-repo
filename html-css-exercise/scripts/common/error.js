@@ -4,8 +4,8 @@
  * NOTE: this class expects, that you already have a pre-defined CSS classes:
  *      * `error-container` - expected to be `position: fixed`
  *          * `error` - expected to be placed inside `error-container` and `display: flex`
- *              * `error-message` - expected to be placed insied `error`
- *              * `close-error-message` - expected to be placed insied `error`
+ *              * `error-message` - expected to be placed inside `error`
+ *              * `close-error-message` - expected to be placed inside `error`
  */
 export default class AlertErrorHandler {
   /**
